@@ -4,3 +4,4 @@ dist/
 invoices/
 .env
 .DS_Store
+.claude/settings.local.json
