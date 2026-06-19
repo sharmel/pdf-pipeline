@@ -1,0 +1,26 @@
+invoice_number,date,vendor,customer,items,subtotal,tax,discount,total
+INV-001,2025-01-03,Northwind Trading,Sarah Chen,Office Chair x 2 @ 150.00 | Desk Lamp x 3 @ 45.00,435.00,34.80,0,469.80
+INV-002,2025-01-05,Acme Supplies,James Park,Paper Ream x 10 @ 8.50 | Stapler x 2 @ 12.00,109.00,8.72,0,117.72
+INV-003,2025-01-08,Globex Corp,Monica Liu,Server Rack x 1 @ 850.00 | Cable Kit x 4 @ 32.00,978.00,78.24,0,1056.24
+INV-004,2025-01-10,Initech Solutions,Peter Gibbons,TPS Reports x 100 @ 0.50,50.00,0,0,50.00
+INV-005,2025-01-12,Umbrella Logistics,David Yamato,Shipping Box x 50 @ 2.25 | Bubble Wrap Roll x 5 @ 15.00,187.50,15.00,0,202.50
+INV-006,2025-01-15,Hooli Services,Erlich Bachman,Cloud Storage x 1 @ 299.00,299.00,23.92,29.90,293.02
+INV-007,2025-01-18,Pied Piper,Jared Dunn,Compression License x 1 @ 1200.00,1200.00,96.00,0,1296.00
+INV-008,2025-01-20,Wayne Industries,Lucius Fox,Prototype Armor x 1 @ 15000.00 | Grappling Hook x 2 @ 450.00,15900.00,0,0,15900.00
+INV-009,2025-01-23,Northwind Trading,Emily Rivera,Whiteboard x 1 @ 220.00 | Marker Set x 4 @ 18.00,292.00,23.36,0,315.36
+INV-010,2025-01-27,Acme Supplies,Michael Okonkwo,Coffee Beans 1kg x 6 @ 28.00,168.00,13.44,16.80,164.64
+INV-011,2025-01-30,Globex Corp,Priya Patel,Firewall Appliance x 1 @ 2400.00,2400.00,192.00,0,2592.00
+INV-012,2025-02-02,Initech Solutions,Bill Lumbergh,Consulting Hours x 20 @ 180.00,3600.00,288.00,0,3888.00
+INV-013,2025-02-05,Umbrella Logistics,Chen Wei,Pallet Delivery x 3 @ 125.00,375.00,0,37.50,337.50
+INV-014,2025-02-08,Hooli Services,Gavin Belson,API Credits x 100000 @ 0.002,200.00,16.00,0,216.00
+INV-015,2025-02-10,Pied Piper,Dinesh Chugtai,Middle-Out Library x 1 @ 499.00 | Integration Hours x 5 @ 150.00,1249.00,99.92,124.90,1224.02
+INV-016,2025-02-12,Wayne Industries,Alfred Pennyworth,Security Audit x 1 @ 4500.00,4500.00,360.00,0,4860.00
+INV-017,2025-02-15,Northwind Trading,Olivia Martinez,Filing Cabinet x 2 @ 380.00 | Keyboard x 5 @ 65.00,1085.00,86.80,0,1171.80
+INV-018,2025-02-18,Acme Supplies,Raj Kapoor,Notebook x 40 @ 4.50 | Pen Pack x 10 @ 6.00,240.00,19.20,0,259.20
+INV-019,2025-02-22,Globex Corp,Naomi Brand,Network Switch x 2 @ 680.00,1360.00,108.80,136.00,1332.80
+INV-020,2025-02-25,Initech Solutions,Samir Nagheenanajar,Printer Maintenance x 1 @ 450.00,450.00,36.00,0,486.00
+INV-021,2025-02-28,Umbrella Logistics,Aisha Khan,Freight Truck x 1 @ 2200.00 | Handling Fee x 1 @ 150.00,2350.00,0,0,2350.00
+INV-022,2025-03-03,Hooli Services,Richard Hendricks,Hosting Tier Pro x 3 @ 99.00,297.00,23.76,0,320.76
+INV-023,2025-03-07,Pied Piper,Monica Hall,Decompression Audit x 1 @ 2800.00,2800.00,224.00,0,3024.00
+INV-024,2025-03-12,Wayne Industries,Harvey Dent,Legal Retainer x 1 @ 7500.00,7500.00,600.00,0,8100.00
+INV-025,2025-03-20,Northwind Trading,Tom Okafor,Conference Table x 1 @ 1800.00 | Ergonomic Chair x 8 @ 280.00,4040.00,323.20,0,4363.20
