@@ -7,13 +7,16 @@
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit",
-    "start": "npm run build && node dist/generate_invoices.js"
+    "start": "npm run build && node dist/generate_invoices.js",
+    "extract": "npm run build && node dist/src/extract_invoices.js",
+    "top-vendors": "npm run build && node dist/src/top_vendors.js"
   },
   "dependencies": {
+    "pdfjs-dist": "^4.7.76",
     "pdfkit": "^0.15.0"
   },
   "devDependencies": {
-    "@types/node": "^20.19.43",
+    "@types/node": "^24.0.0",
     "@types/pdfkit": "^0.17.6",
     "typescript": "^5.9.3"
   }

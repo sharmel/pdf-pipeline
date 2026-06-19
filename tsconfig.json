@@ -14,6 +14,6 @@
     "declaration": false,
     "sourceMap": false
   },
-  "include": ["generate_invoices.ts"],
+  "include": ["generate_invoices.ts", "src/**/*"],
   "exclude": ["node_modules", "dist", "invoices"]
 }

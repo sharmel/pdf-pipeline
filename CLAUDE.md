@@ -15,6 +15,15 @@ It contains two things: (1) project-specific facts about `pdf-pipeline/`, and (2
 
 Both produce visually equivalent PDFs into `invoices/<invoice_number>.pdf`. The two implementations are kept in sync — when changing layout, parser rules, or output, update both files.
 
+A reverse direction also exists (TypeScript only, no Python counterpart):
+
+- **`src/extract_invoices.ts`** — reads every `invoices/*.pdf` and writes the recovered data into `invoices.db` (SQLite, two tables: `invoices` + `invoice_items`).
+- **`src/top_vendors.ts`** — queries `invoices.db` for the top 5 vendors by total spend.
+
+`pdftotext` is unusable here: pdfkit draws at absolute positions, so a flat dump interleaves blocks and mixes columns across rows. The extractor uses **`pdfjs-dist`** (per-fragment x/y from `transform[4]/[5]`) to reconstruct the table, and the **built-in `node:sqlite`** module (Node 22+) so no native SQLite dependency is needed. `invoices.db` is generated output (gitignored, like `invoices/`); re-running skips invoices already in the DB.
+
+⚠️ **The extractor's items-table x-buckets are hard-coded to match `generate_invoices.ts:163-169`.** If you change the generator's column layout, `src/extract_invoices.ts` silently breaks — update both.
+
 **Why two implementations exist:** the project has no documented history, so the dual-language approach is treated as an intentional cross-check (same input → same output via two independent code paths), not redundancy to be consolidated. Confirm with the user before deleting either file.
 
 **Why this file exists:** there is no README, no design doc, and no test suite. The only way a new contributor (or a future Claude instance) can recover the project's intent and constraints is from this file and the source. When making non-trivial changes, extend the relevant section below — don't leave decisions implicit.
@@ -32,7 +41,9 @@ python generate_invoices.py
 **Node.js:**
 ```bash
 npm install
-npm start
+npm start          # CSV -> PDFs
+npm run extract    # invoices/*.pdf -> invoices.db
+npm run top-vendors# query: top 5 vendors by spend
 ```
 
 No test suite, linter, or build step exists today. Verification of the existing scripts = run one, open a generated PDF, eyeball the layout. The PDFs in `invoices/` are not committed reference output — regenerate them as part of verifying any change. New code should add tests and (for JS work) a TypeScript build setup — see "Defaults for Future Changes" below.
